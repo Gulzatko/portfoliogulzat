@@ -25,7 +25,7 @@ export const data = {
             title: "Frontend Developer",
             subtitle:"Seytech",
             description:
-            "Software engeneering Bootcamp"
+            "Software engineering Bootcamp"
         },
         {
             title: "Faculty of World Languages",
