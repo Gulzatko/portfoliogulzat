@@ -20,7 +20,7 @@ export const data = {
         },
        
     ],
-    educaton:[
+    education:[
         {
             title: "Frontend Developer",
             subtitle:"Seytech",
