@@ -7,6 +7,7 @@ import ImageThree from "../../img/codes.jpg";
 import ImageFour from "../../img/ecomerce.jpg";
 import ImageFive from "../../img/image5.jpeg";
 import "./styles.scss";
+import { useState } from "react";
 
 const portfolioData = [
   {
@@ -21,17 +22,17 @@ const portfolioData = [
     image: ImageTwo,
   },
   {
-    id: 3,
+    id: 2,
     name: "stopwatchApp",
     image: ImageThree,
   },
   {
-    id: 4,
+    id: 2,
     name: "new_osh",
     image: ImageFour,
   },
   {
-    id: 5,
+    id: 3,
     name: "portfolio",
     image: ImageFive,
   },
@@ -52,8 +53,21 @@ const filterData = [
 ];
 
 const Portfolio = () => {
+  const [filtredvalue, setFiltredValue] = useState(1);
 
-  
+  function handleFilter(currentId) {
+    setFiltredValue(currentId);
+  }
+  console.log("------");
+  console.log(filtredvalue);
+  console.log("__________");
+
+  const filteredItems =
+    filtredvalue === 1
+      ? portfolioData
+      : portfolioData.filter((item) => item.id === filtredvalue);
+
+  console.log(filteredItems);
   return (
     <section id="portfolio" className="portfolio">
       <PageHeaderContent
@@ -63,12 +77,17 @@ const Portfolio = () => {
       <div className="portfolio__content">
         <ul className="portfolio__content__filter">
           {filterData.map((item) => (
-            <li key={item.filterId}>{item.label}</li>
+            <li className={item.filterId === filtredvalue ? 'active' : ''}  onClick={() => handleFilter(item.filterId)} key={item.filterId}>
+              {item.label}
+            </li>
           ))}
         </ul>
         <div className="portfolio__content__cards">
-          {portfolioData.map((item) => (
-            <div className="portfolio__content__cards__item" key={item.id}>
+          {filteredItems.map((item) => (
+            <div
+              className="portfolio__content__cards__item"
+              key={`cardItem${item.name.trim()}`}
+            >
               <div className="portfolio__content__cards__item__img-wrapper">
                 <a href="">
                   <img alt="dummy" src={item.image} />
