@@ -14,27 +14,32 @@ const portfolioData = [
     id: 2,
     name: "Neobis-front-cinema",
     image: ImageOne,
+    link: "",
   },
 
   {
     id: 3,
     name: "giphy_api",
     image: ImageTwo,
+    link: "",
   },
   {
     id: 2,
     name: "stopwatchApp",
     image: ImageThree,
+    link: "",
   },
   {
     id: 2,
     name: "new_osh",
     image: ImageFour,
+    link: "",
   },
   {
     id: 3,
     name: "portfolio",
     image: ImageFive,
+    link: "",
   },
 ];
 const filterData = [
@@ -54,13 +59,16 @@ const filterData = [
 
 const Portfolio = () => {
   const [filtredvalue, setFiltredValue] = useState(1);
+  const [hoverValue, setHoverValue] = useState(null);
 
   function handleFilter(currentId) {
     setFiltredValue(currentId);
   }
-  console.log("------");
-  console.log(filtredvalue);
-  console.log("__________");
+ function handleHover(index){
+   setHoverValue(index);
+ }
+
+ console.log(hoverValue);
 
   const filteredItems =
     filtredvalue === 1
@@ -77,21 +85,37 @@ const Portfolio = () => {
       <div className="portfolio__content">
         <ul className="portfolio__content__filter">
           {filterData.map((item) => (
-            <li className={item.filterId === filtredvalue ? 'active' : ''}  onClick={() => handleFilter(item.filterId)} key={item.filterId}>
+            <li
+              className={item.filterId === filtredvalue ? "active" : ""}
+              onClick={() => handleFilter(item.filterId)}
+              key={item.filterId}
+            >
               {item.label}
             </li>
           ))}
         </ul>
         <div className="portfolio__content__cards">
-          {filteredItems.map((item) => (
+          {filteredItems.map((item, index) => (
             <div
               className="portfolio__content__cards__item"
               key={`cardItem${item.name.trim()}`}
+              onMouseEnter={()=> handleHover(index)}
+              onMouseLeave={()=> handleHover(null)}
             >
               <div className="portfolio__content__cards__item__img-wrapper">
                 <a href="">
                   <img alt="dummy" src={item.image} />
                 </a>
+              </div>
+              <div className="overlay">
+                 {
+                  index === hoverValue && (
+                    <div>
+                     <p>{item.name}</p>
+                     <button>Visit</button>
+                    </div>
+                  )
+                 }
               </div>
             </div>
           ))}
