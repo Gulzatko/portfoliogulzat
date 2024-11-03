@@ -11,20 +11,20 @@ import { useState } from "react";
 
 const portfolioData = [
   {
-    id: 2,
+    id: 3,
     name: "Neobis-front-cinema",
     image: ImageOne,
     link: "",
   },
 
   {
-    id: 3,
+    id: 2,
     name: "giphy_api",
     image: ImageTwo,
     link: "",
   },
   {
-    id: 2,
+    id: 3,
     name: "stopwatchApp",
     image: ImageThree,
     link: "",
