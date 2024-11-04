@@ -2,7 +2,7 @@ import React from "react";
 import { BsInfoCircleFill } from "react-icons/bs";
 import PageheaderContent from "../../components/pageHeaderContent";
 import { Animate } from "react-simple-animate";
-import './styles.scss';
+import "./styles.scss";
 
 const Contact = () => {
   return (
@@ -35,25 +35,37 @@ const Contact = () => {
           end={{
             transform: "translateX(0px)",
           }}
-           >
-           <div className="contact__content__form">
+        >
+          <div className="contact__content__form">
             <div className="contact__content__form__controlswrapper">
-              <div className="nameWrapper">
-                <input name="name" className="inputName" type={"text"} />
-                <label htmlFor="name" className="nameLabel">Name</label>
+              <div>
+                <input required name="name" className="inputName" type={"text"} />
+                <label htmlFor="name" className="nameLabel">
+                  Name
+                </label>
               </div>
-              <div className="emailWrapper">
-              <input name="email" className="inputEmail" type={"email"} />
-              <label htmlFor="email" className="emailLabel">Email</label>
+              <div>
+                <input required  name="email" className="inputEmail" type={"email"} />
+                <label htmlFor="email" className="emailLabel">
+                  Email
+                </label>
               </div>
-              <div className="descriptionWrapper">
-              <input name="description" className="inputdescription" type={'text'}/>
-              <label htmlFor="description" className="descriptionLabel">Name</label>
+              <div>
+                <textarea 
+                  required 
+                  name="description"
+                  className="inputdescription"
+                  type={"text"}
+                  rows = "5"
+                />
+                <label htmlFor="description" className="descriptionLabel">
+                  Description
+                </label>
               </div>
             </div>
             <button>Submit</button>
-           </div>
-           </Animate>
+          </div>
+        </Animate>
       </div>
     </section>
   );
