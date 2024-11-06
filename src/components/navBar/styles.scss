@@ -1,5 +1,5 @@
 .navbar{
-  background-color: var( --yellow-theme-nav-background-color);  
+  background-color: var(--yellow-theme-nav-background-color);  
   height: 80px;
   display: flex;
   justify-content: center;
@@ -11,8 +11,8 @@
     display: flex;
     align-items: center;
     width:100%;
-    height: inherit;
-    padding: 0 20px;
+    height:inherit;
+    padding:0px 20px;
     flex:1;
 
     &__logo{
@@ -20,20 +20,21 @@
         cursor: pointer;
     }
     &__menu{
-       display: flex; 
+       display:flex; 
        list-style: none;
        text-align: center;
        
        &__item{
          line-height: 40px;
-         margin-right: 1.5rem;
-         font-size:1.6rem;
+          margin-right: 1.5rem;
+          font-size:1.6rem;
+
           &::after{
-            content:"";
+            content:'';
             display: block;
             height: 3px;
             width: 0;
-            background: transparent;
+            background:transparent;
             transition: all 0.5s ease;
           }
           &:hover::after{
@@ -53,25 +54,26 @@
 .nav-icon{
     display: none;
 }
-@media screen and (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
   .navbar__container__menu{
-     display: flex;
+     display:flex;
      flex-direction: column;
      justify-content: center;
      width:100%;
-     position: absolute;
+     position:absolute;
      top:80px;
-     left: -110%;
+     left: -200%;
      opacity: 1;
      transition: all 0.5 ease;
      
      &.active{
-       background: #181818;
+       background:#181818;
        left:0px;
-       opacity: 1;
+       opacity:1;
      }
      &__item{
-      border-bottom: 1px solid #282828;
+      border-bottom:1px solid #282828;
       margin:0px;
       padding: 20px 0px;
      }

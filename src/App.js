@@ -32,10 +32,10 @@ function App() {
         <Particles id="tsparticles" init={handleInit} options={particlesOptions} />
       )}
 
-      <Navbar />
+      <Navbar/>
       <div className="App__main-page-content">
         <Routes>
-          <Route index path="/" element={<Home />} />
+          <Route index  path="/" element={<Home/>} />
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/resume" element={<Resume />} />
