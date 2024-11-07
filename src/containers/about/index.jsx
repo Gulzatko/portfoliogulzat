@@ -67,6 +67,10 @@ const About = () => {
                 <span className="title">Contact No:</span>
                 <span className="value"> +971569596746</span>
               </li>
+              <li>
+                <span className="title">GitHub</span>
+                <span className="value">https://github.com/Gulzatko</span>
+              </li>
             </ul>
           </Animate>
         </div>

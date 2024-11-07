@@ -25,15 +25,15 @@ export const skillsData = [
         label:"FRONT END",
          data:[
             {
-                skillName:"HTML",
+                skillName:"JS and DOM manipulation",
                 percentage:"90",
             },
             {
-                skillName:"CSS",
+                skillName:"CSS Bootstrap",
                 percentage:"50",
             },
             {
-                skillName:"JAVASCRIPT",
+                skillName:"React Hooks",
                 percentage:"80",
             },
             {
@@ -46,20 +46,20 @@ export const skillsData = [
         label:"FRONT END",
          data:[
             {
-                skillName:"HTML",
-                percentage:"90",
+                skillName:"Material-UI",
+                percentage:"45",
             },
             {
-                skillName:"CSS",
+                skillName:"React-Router-DOM",
                 percentage:"50",
             },
             {
-                skillName:"JAVASCRIPT",
-                percentage:"80",
+                skillName:"React Toolkit",
+                percentage:"10",
             },
             {
-                skillName:"React.JS",
-                percentage:"70",
+                skillName:"SCSS",
+                percentage:"50",
             }
          ]
     }
