@@ -10,7 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 import "./styles.scss";
 import { MdWork } from "react-icons/md";
 
-const Resume = () => {
+const Resume =()=> {
   return (
     <section id="resume" className="resume">
       <PageheaderContent
@@ -36,7 +36,7 @@ const Resume = () => {
                 date="2022 - Present"
                 icon={<MdWork />}
                 iconStyle={{
-                  background: "#181818",
+                  background:"#181818",
                   color: "var(--yellow-theme-main-color",
                 }}
               >
